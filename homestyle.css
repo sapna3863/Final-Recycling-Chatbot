@@ -1,0 +1,111 @@
+.message.user::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px; /* Adjust for the right alignment */
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFE0; /* Yellow */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}.message.bot::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -10px; /* Adjust for the left alignment */
+  width: 10px;
+  height: 10px;
+  background-color: lightgreen; /* Light blue */
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}.chat-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6c584c; /* Dark Brown */
+}
+
+.chatbox {
+  height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #a98467; /* Brown */
+  border-radius: 10px;
+  background-color: #fbf7e8; /* Beige */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the chatbox */
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to messages */
+}
+
+/* Style user messages */
+.message.user {
+  background-color: #f0ead2; /* Dark Beige */
+  color: #6c584c; /* Dark Brown */
+  text-align: center;
+  margin-left: auto;
+  display: block;
+}
+
+/* Style bot messages */
+.message.Chatbot {
+  background-color: #adc178; /* Green */
+  color: #fbf7e8; /* Beige */
+  text-align: left;
+  margin-right: auto;
+}
+
+.user-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+#user-message {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #a98467; /* Brown */
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #f0ead2; /* Dark Beige */
+  color: #6c584c; /* Dark Brown */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the input field */
+}
+
+#send-message {
+  padding: 10px 15px;
+  background-color: #6c584c; /* Dark Brown */
+  color: #fbf7e8; /* Beige */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to the send button */
+}
+
+#send-message:hover {
+  background-color: #a98467; /* Brown */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .chat-container {
+    width: 95%;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}

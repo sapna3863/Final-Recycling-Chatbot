@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- after many efforts, i recreated a login/ signup using html so users can have acess to other types of my projects-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css"/>
+    <title>User login Form</title>
+  </head>
+
+  <body> 
+      <div class="forms-container " >
+        <div class="signin-signup form-box">
+           <!-- Login part-->
+          <form action="home.html" class="sign-in-form">
+            <h2 class="title">Login</h2>
+
+            <!-- username -->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required />
+            </div>
+
+            <!-- Password -->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+
+            <input type="submit" value="Login" class="btn solid"/>
+            <p class="social-text">Not a member? <a href="#">Sign up</a> </p>
+          </form>
+    </div>
+  </body>
+</html>

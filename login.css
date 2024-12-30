@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background-color: lightblue;
+}
+
+/*everything with a class container*/
+/* .container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+} */
+
+/*everything with a class forms-container*/
+.forms-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*PERTAINS TO THE FORM ITSELF */
+.signin-signup {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* centers it */
+  left: 50%;
+  top: 50%;
+  /* centers it */
+  width: 50%;
+  transition: 1s 0.2s ease-in-out;
+  display: grid;
+  z-index: 5;
+  /* background: #adadad; */
+  border-radius: 30px;
+}
+
+/* BOX FOR THE LOGIN */
+.form-box{
+    background:  white;;
+    width: 420px;
+    height: 430px;
+    box-shadow: 10px 10px 10px -1px rgb(243, 238, 238);
+}
+
+/*this applies to everything dat is inside a "form"*/
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  transition: all 0.2s 0.7s;
+  overflow: hidden;
+}
+
+/* "sign up" text */
+a{
+    color: lightblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(97, 139, 155);
+}
+
+/* Login text */
+.title {
+  font-size: 2.4rem;
+  color: lightblue;
+  margin-bottom: 10px;
+}
+
+/* ------------------Input field---------------- */
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  width: 300px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+/*applies to all "input" inside the class "input-field*/
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/*NOTE: this applies to the input section in the class "input-field 
+specifically the "placeholder*/
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+/*applies to all the 'i' icons inside the class "input-field"
+ex:  <div class="input-field">
+    <i class="fas fa-user"></i> */
+    .input-field i {
+        text-align: center;
+        line-height: 55px;
+        color: #b9b3b3;
+        transition: 0.5s;
+        font-size: 1.1rem;
+      }
+
+/*----- BUTTONS -----*/
+.btn {
+  width: 150px;
+  background-color:lightblue;
+  border: none;
+  outline: none;
+  height: 49px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+/* login button hover */
+.btn:hover {
+  background-color:rgb(154, 192, 204);
+  transition: all 0.4s ease;
+    box-shadow: rgba(227, 225, 235, 0.973) 0 1px 23px;
+    transition-duration: .1s;
+}
+
+
