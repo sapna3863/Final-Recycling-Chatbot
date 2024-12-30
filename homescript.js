@@ -63,6 +63,7 @@ const instructionsTemplate = {
             "Create barriers, turns, and drops to make the marble run more interesting.",
             "Test your marble run by dropping a small marble or ping pong ball and watching it travel.",
             "Experiment with different angles and track designs to see how they affect the ball's movement.",
+            "Here is a scratch project to learn more: https://scratch.mit.edu/projects/1103550281",
         ],
     },
     "electronic-parts-robot": {
@@ -74,6 +75,7 @@ const instructionsTemplate = {
             "Attach electronic parts using safe, child-friendly glue or tape.",
             "Create a face or design using the buttons and parts.",
             "IMPORTANT: An adult must supervise and help with any electronic part handling.",
+            "Here is a scratch project to learn more: https://scratch.mit.edu/projects/1103030075",
         ],
     },
     "compost-terrarium": {
@@ -85,6 +87,7 @@ const instructionsTemplate = {
             "Add a layer of soil mixed with your food scraps (like fruit peels, coffee grounds).",
             "Plant some small seeds or seedlings on top of the compost layer.",
             "Water lightly and place in a sunny spot. Watch how the food waste helps plants grow!",
+            "Here's a scratch project to learn more: https://scratch.mit.edu/projects/1102669824",
         ],
     },
     "paper-seed-starter": {
@@ -96,6 +99,7 @@ const instructionsTemplate = {
             "Press the pulp into small molds or egg carton sections.",
             "Let the paper dry completely into seed-starting pots.",
             "Fill the pots with soil and plant seeds. The paper will biodegrade and help the seeds grow!",
+            "Here is a scratch project to learn more: https://scratch.mit.edu/projects/1105123564",
         ],
     },
     "water-filter-experiment": {
@@ -107,6 +111,7 @@ const instructionsTemplate = {
             "Add layers of fine sand, then small rocks, then larger gravel.",
             "Pour dirty water (like muddy water from outside) through the filter.",
             "Observe how the layers clean the water. ALWAYS have an adult verify the water's cleanliness before any contact!",
+            "Here's scratch projects  to learn more: https://scratch.mit.edu/projects/1108432596 and            https://scratch.mit.edu/projects/1108821011 and https://scratch.mit.edu/projects/1100132517", 
         ],
     },
     "bottle-vertical-garden": {
@@ -118,6 +123,7 @@ const instructionsTemplate = {
             "Fill each section with potting soil.",
             "Plant herbs, small flowers, or succulents in each bottle section.",
             "Hang the bottles vertically using strong string or wire, creating a hanging garden.",
+            "Here's a scratch project to learn more: https://scratch.mit.edu/projects/1108350699",
         ],
     }
 };
@@ -162,12 +168,6 @@ function generateResponse(material) {
             if (showInstructions) {
                 const instructions = getInstructions(project);
                 sendInstructions(instructions);
-
-                // Scratch project offer
-                const scratchProject = confirm("Would you like to see a related Scratch project about this material?");
-                if (scratchProject) {
-                    sendMessage("Scratch project link will be provided soon! Stay tuned for a interactive coding experience related to your recycling project. 🖥️");
-                }
 
                 recyclingLevel++;
                 totalProjects++;
