@@ -424,29 +424,6 @@ div.highlightTextOut a:hover:before, div.highlightTextIn a:hover:before
     opacity: 1;
 }
 
-/* Highlight text in  */
-div.highlightTextIn a
-{
-    color: rgba(0, 0, 0, 0.4); 
-}
-
-div.highlightTextIn a:before
-{
-    transform: scale(1.2);
-} 
-
-
-.aboutUsPics{
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  display: flex;
-  justify-items: center;
-  margin: auto;
-  border: 3px double #E8AA42;
-  border-radius: 50%;
-}
-
 
 /* entire navigation bar */
 .topnav {
@@ -458,81 +435,6 @@ div.highlightTextIn a:before
 
 
 
-/* code for tracker */
-.journalentry{
-  height: 200px;
-  width: 1000px;
-  margin-top: 20px;
-  background-color:#d9e6c7;
-  border: 2px solid #afb9a2;
-  font-family: "Poppins";
-  font-style: italic;
-  color: #5c6057;
-  padding-left:15px;
-  
-}
-.submissionbutton{
-  display:block;
-  margin-top: 10px;
-  background-color:#739f65;
-  font-size: 20px;
-  font-family: "Poppins";
-}
-
-.box{
-  width:50px;
-  height:50px;
-  border:1px solid #8d8181;
-  background-color: #bab5b5;
-  margin-top: 10px;
-  margin-left:5px;
-  margin-right:5px;
-  text-align: left;
-}
-
-.allboxes{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.amazing{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-}
-
-.frustrated{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-}
-
-.sad{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-
-}
-
-.anxious{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-
-}
-
-.productive{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-
-}
-
-.tired{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-}
-.weak{
-  background-color:#f4ecec;
-  border: 2px solid #d8cfcf;
-}
-
 /* CSS */
 .button-27 {
   appearance: none;
@@ -543,12 +445,12 @@ div.highlightTextIn a:before
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   line-height: normal;
-  min-height: 60px;
-  min-width: 0;
+  min-height: clamp(40px, 8vh, 60px);
+  min-width: clamp(120px, 15vw, 200px);
   outline: none;
-  padding: 16px 24px;
+  padding: clamp(12px, 2vh, 16px) clamp(16px, 3vw, 24px);
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
@@ -556,7 +458,7 @@ div.highlightTextIn a:before
   -webkit-user-select: none;
   touch-action: manipulation;
   will-change: transform;
-  width:13%;
+  width: auto;
 }
 
 .button-27:disabled {
@@ -693,602 +595,164 @@ div.highlightTextIn a:before
   width:50%;
 }
 
- .button-81 {
-    background-color: #fff;
-    border: 0 solid #e2e8f0;
-    border-radius: 1.5rem;
-    box-sizing: border-box;
-    color: #0d172a;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 10px;
-    line-height: 1;
-    padding: 1rem 1.6rem;
-    text-align: center;
-    text-decoration: none #0d172a solid;
-    text-decoration-thickness: auto;
-    transition: all .1s cubic-bezier(.4, 0, .2, 1);
-    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-
-  .button-81:hover {
-    background-color: #1e293b;
-    color: #fff;
-  }
-@media (min-width: 768px) {
-    .button-81 {
-      font-size: 1.125rem;
-      padding: 1rem 2rem;
-    }
-
-
-.wholecards{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #434343;
-    font-size: 20px;
-
-}
-
-main.cards {
-    display: flex;
-    padding: 32px;
-    font-family: 'Varela Round', sans-serif;
-
-}
-
-main.cards h3{
-    color: lightblue;
-}
-
-main.cards section.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 1rem 3rem;
-    border-radius: 8px;
-    /* max-height: 250px; */
-    height: 350px;
-    margin-left: 32px;
-}
-
-main.cards section.card:first-child {
-    margin-left: 0;
-}
-
-main.cards section.card .icon {
-    margin-left:-135px;
-    width: 100px;
-    height: 64px;
-    margin-bottom: 26px; /* space between image and words */
-}
-
-/* IMPORTANT: THIS APPLIES TO THE MENTOR PICTURE ONLY
-I HAD TO MAKE ANOTHER ONE SPECIFICALLY FOR IT BC THE IMAGE WAS TO SMALL AND I 
-WANTED ONLY THE MENTOR IMAGE TO CHANGE */
-main.cards section.card .mentor{
-    width: 115px;
-    /* height: 64px; */
-} 
-
-main.cards section.card img {
-    width: 100%;
-}
-
-main.cards section.card h3 {
-    font-size: 100%;
-    margin: 40px 0;
-    margin-bottom: 15px; /* space between h3 words and span words */
-}
-
-main.cards section.card span {
-    font-weight: 300;
-    max-width: 240px;
-    font-size: 19px;
-    margin-bottom: 24px;/* space between span words and buttons */
-    /* margin-top: 2px; */
-}
-
-/* ----CARD BUTTONS  */
-main.cards section.card button {
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 32px;
-    border: 0;
-    cursor: pointer;
-    font-size: 80%;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 16px 0;
-    font-family: 'Varela Round', sans-serif;
-}
-
-/* mentor card */
-main.cards section.card.mentor:hover {
-    margin-top: -25px;
-}
-/* journal card */
-main.cards section.card.journal:hover {
-    margin-top: -25px;
-}
-/* forum card */
-main.cards section.card.forum:hover {
-    margin-top: -25px;
-}
-/* event card */
-main.cards section.card.event:hover {
-    margin-top: -25px;
-}
-
-
-/* mentor button */
-main.cards section.card.mentor button {
-    background: lightblue;
-}
-main.cards section.card.mentor {
-    box-shadow: 20px 20px 50px -28px #94b6cc00; 
-}
-
-main.cards section.card.mentor button:hover{
-    font-size: 18px;
-    border-radius: 60px;
-}
-
-/* Journal button */
-main.cards section.card.journal button {
-    background: lightblue;
-}
-main.cards section.card.journal {
-    box-shadow: 20px 20px 50px -28px #94b6cc00;
-}
-main.cards section.card.journal button:hover{
-    background: lightblue;
-    font-size: 18px;
-    border-radius: 60px;
-}
-
-/* Forum Button */
-main.cards section.card.forum button {
-    background: lightblue;
-}
-main.cards section.card.forum {
-    box-shadow: 20px 20px 50px -28px #94b6cc00;
-}
-
-main.cards section.card.forum button:hover{
-    font-size: 18px;
-    border-radius: 60px;
-}
-
-/* Event button */
-main.cards section.card.event button {
-    background: lightblue;
-}
-main.cards section.card.event {
-    box-shadow: 20px 20px 50px -28px #94b6cc00;
-}
-main.cards section.card.event button:hover{
-    font-size: 18px;
-    border-radius: 60px;
-}
-
-@media screen and (max-width: 720px) {
-    main.cards {
-        flex-direction: column;
-    }
-
-    main.cards section.card {
-        margin-left: 0;
-        margin-bottom: 32px;
-    }
-
-    main.cards section.card:last-child {
-        margin-bottom: 0;
-    }
-
-    main.cards section.card button {
-        font-size: 70%;
-    }
-
-}
-
- #section01 {
-    background: url(https://www.nxworld.net/example/css-scroll-down-button/bg01.jpg) center center / cover no-repeat;
-  }
-
-
-  .demo a {
-    position: absolute;
-    z-index: 2;
-    bottom:5%;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-  }
-
-  .demo a:hover {
-    opacity: .5;
-  }
-
-
-
-  #section01 a {
-    padding-top: 60px;
-    left:48.5%;
-  }
-
-  #section01 a span {
-    position: absolute;
-    top: 0;
-    left: 47%;
-    width: 24px;
-    height: 24px;
-    margin-left: -10px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-  }
-
-#scrollPart2 {
-    background: url(https://www.nxworld.net/example/css-scroll-down-button/bg01.jpg) center center / cover no-repeat;
-  }
-
-
-  .demo2 a {
-    position: absolute;
-    z-index: 2;
-    top:196.5%;
-    left:49.1%;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-  }
-
-  .demo2 a:hover {
-    opacity: .5;
-  }
-
-
-
-  #scrollPart2 a {
-    padding-top: 60px;
-  }
-
-  #scrollPart2 a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-  }
-
-  
-#scrollPart3 {
-    background: url(https://www.nxworld.net/example/css-scroll-down-button/bg01.jpg) center center / cover no-repeat;
-  }
-
-
-  .demo3 a {
-    position: absolute;
-    z-index: 2;
-    top:350%;
-    left:48.25%;
-    display: inline-block;
-    -webkit-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    color: #fff;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
-    text-decoration: none;
-    transition: opacity .3s;
-  }
-
-  .demo3 a:hover {
-    opacity: .5;
-  }
-
-
-
-  #scrollPart3 a {
-    padding-top: 60px;
-  }
-
-  #scrollPart3 a span {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    box-sizing: border-box;
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-
-.game-quiz-container{
-    width: 40rem;
-    height: 30rem;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 30px;
-}
-
-.game-details-container{
-    width: 80%;
-    height: 4rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.game-details-container h1{
-    font-size: 1.2rem;
-}
-
-.game-question-container{
-    width: 80%;
-    height: 8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid darkgray;
-    border-radius: 25px;
-}
-
-.game-question-container h1{
-    font-size: 1.1rem;
-    text-align: center;
-    padding: 3px;
-}
-
-.game-options-container{
-    width: 80%;
-    height: 12rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.game-options-container span{
-    width: 45%;
-    height: 3rem;
-    border: 2px solid darkgray;
-    border-radius: 20px;
-    overflow: hidden;
-}
-span label{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s;
-    font-weight: 600;
-    color: rgb(22, 22, 22);
-}
-
-span label:hover{
-    -ms-transform: scale(1.12);
-    -webkit-transform: scale(1.12);
-    transform: scale(1.12);
-    color: white;
-}
-
-input[type="radio"] {
-    position: relative;
-    display: none;
-}
-
-
-input[type=radio]:checked ~ .option {
-    background: paleturquoise;
-}
-
-.next-button-container{
-    width: 50%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-}
-.next-button-container button{
-    width: 8rem;
-    height: 2rem;
-    border-radius: 10px;
-    background: none;
-    color: rgb(25, 25, 25);
-    font-weight: 600;
-    border: 2px solid gray;
-    cursor: pointer;
-    outline: none;
-}
-.next-button-container button:hover{
-    background-color: rgb(143, 93, 93);
-}
-
-.modal-container{
-    display: none;
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    -webkit-animation: fadeIn 1.2s ease-in-out;
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-.modal-content-container{
-    height: 20rem;
-    width: 25rem;
-    background-color: rgb(43, 42, 42);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 25px;
-}
-
-.modal-content-container h1{
-    font-size: 1.3rem;
-    height: 3rem;
-    color: lightgray;
-    text-align: center;
-}
-
-.grade-details{
-    width: 15rem;
-    height: 10rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.grade-details p{
-    color: white;
-    text-align: center;
-}
-
-.modal-button-container{
-    height: 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-button-container button{
-    width: 10rem;
-    height: 2rem;
-    background: none;
-    outline: none;
-    border: 1px solid rgb(252, 242, 241);
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 20px;
-}
-.modal-button-container button:hover{
-    background-color: rgb(83, 82, 82);
-}
-
-@media(min-width : 300px) and (max-width : 350px){
-    .game-quiz-container{
-        width: 90%;
-        height: 80vh;
-     }
-     .game-details-container h1{
-        font-size: 0.8rem;
-     }
-
-     .game-question-container{
-        height: 6rem;
-     }
-     .game-question-container h1{
-       font-size: 0.9rem;
-    }
-
-    .game-options-container span{
-        width: 90%;
-        height: 2.5rem;
-    }
-    .game-options-container span label{
-        font-size: 0.8rem;
-    }
-    .modal-content-container{
-        width: 90%;
-        height: 25rem;
-    }
-
-    .modal-content-container h1{
-        font-size: 1.2rem;
-    }
-}
-
-@media(min-width : 350px) and (max-width : 700px){
-   .game-quiz-container{
-       width: 90%;
-       height: 80vh;
-    }
-    .game-details-container h1{
-        font-size: 1rem;
-    }
-
-    .game-question-container{
-        height: 8rem;
-    }
-
-    .game-question-container h1{
+    @media (max-width: 480px) {
+      .homepageText {
+        margin: 10px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .button-81 {
         font-size: 0.9rem;
-     }
-
-    .game-options-container span{
-        width: 90%;
+        padding: 0.6rem 1.2rem;
+      }
     }
-    .modal-content-container{
-        width: 90%;
-        height: 25rem;
+
+    @media (min-width: 1200px) {
+      .homepageText {
+        margin: 100px;
+        padding: 120px;
+      }
+
+      h1 {
+        font-size: 72px;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      .container {
+        padding: 2em 4em;
+      }
+
+      .section2, .section4 {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .mainText {
+        padding: 80px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
-    .modal-content-container h1{
-        font-size: 1.2rem;
+
+    @media (min-width: 1600px) {
+      .homepageText {
+        margin: 120px;
+        padding: 150px;
+      }
+
+      .container {
+        max-width: 1600px;
+        margin: 0 auto;
+      }
     }
-}
+    }
 
+    .mainImageTwo{
+      margin-right:168px;
+      height:110%;
+      width:81%;
+      position:relative;
+      top:-255px;
+    }
+    .mainText2{
+      padding:49px;
+      margin-left:57px;
+      position:relative;
+      top:-150px;
+    }
 
+    .section3{
+      background:white;
+      padding:20px;
+      position:relative;
+      top:-185px;
+    }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+    .sectionThree{
+      background:white;
+      margin:1px;
+    }
 
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
+    .mainQuote{
+      padding:70px;
+      font-size:50px;
+      text-align:center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .section4{
+      display:flex;
+      justify-content: row-reverse;
+      background:white;
+      padding:10px;
+      align-items:center;
+      position:relative;
+      top:-275px;
+    }
+
+    .imgSize{
+      margin:10px;
+      height:20%;
+      width:20%;
+    }
+    .imgSize1{
+      margin:10px;
+      height:18%;
+      width:18%;
+    }
+    .imgSize2{
+      margin:10px;
+      height:2%;
+      width:20%;
+    }
+    .imgSize3{
+      margin:10px;
+      height:50%;
+      width:50%;
+    }
+
+     .button-81 {
+        background-color: #fff;
+        border: 0 solid #e2e8f0;
+        border-radius: 1.5rem;
+        box-sizing: border-box;
+        color: #0d172a;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 10px;
+        line-height: 1;
+        padding: 1rem 1.6rem;
+        text-align: center;
+        text-decoration: none #0d172a solid;
+        text-decoration-thickness: auto;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-81:hover {
+        background-color: #1e293b;
+        color: #fff;
+      }
+    @media (min-width: 768px) {
+        .button-81 {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+    }
