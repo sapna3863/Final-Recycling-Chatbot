@@ -9,6 +9,7 @@
   <title>Recycling Chatbot</title>
   <link rel="stylesheet" href="homestyle.css">
 </head>
+    
 <body>
   <div class="chat-container">
       <h1>Recycling Chatbot ♻️</h1>
@@ -19,6 +20,106 @@
           <button id="send-message">Send Idea</button>
       </div>
   </div>
+    <div class="image-model-container">
+        <h3>Material Scanner</h3>
+        <button type="button" id="startButton" onclick="init()">Start Scanner</button>
+        <button type="button" id="captureButton" onclick="captureImage()" disabled>Capture Image</button>
+        <div id="webcam-container"></div>
+        <div id="label-container"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        const URL = "https://teachablemachine.withgoogle.com/models/peFvHC4z5/";
+        let model, webcam, labelContainer, maxPredictions;
+        let isScanning = false;
+
+        async function init() {
+            const startButton = document.getElementById('startButton');
+            const captureButton = document.getElementById('captureButton');
+            
+            if (!isScanning) {
+                const modelURL = URL + "model.json";
+                const metadataURL = URL + "metadata.json";
+
+                // Load model
+                model = await tmImage.load(modelURL, metadataURL);
+                maxPredictions = model.getTotalClasses();
+
+                // Setup webcam
+                const flip = true;
+                webcam = new tmImage.Webcam(200, 200, flip);
+                await webcam.setup();
+                await webcam.play();
+
+                // Append elements
+                document.getElementById("webcam-container").appendChild(webcam.canvas);
+                labelContainer = document.getElementById("label-container");
+                labelContainer.innerHTML = '';
+                for (let i = 0; i < maxPredictions; i++) {
+                    labelContainer.appendChild(document.createElement("div"));
+                }
+
+                isScanning = true;
+                startButton.textContent = 'Stop Scanner';
+                captureButton.disabled = false;
+                requestAnimationFrame(loop);
+            } else {
+                webcam.stop();
+                isScanning = false;
+                startButton.textContent = 'Start Scanner';
+                captureButton.disabled = true;
+                labelContainer.innerHTML = '';
+            }
+        }
+
+        async function loop() {
+            if (isScanning) {
+                webcam.update();
+                await predict();
+                requestAnimationFrame(loop);
+            }
+        }
+
+        async function predict() {
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+
+        async function captureImage() {
+            if (!isScanning) return;
+            
+            const prediction = await model.predict(webcam.canvas);
+            let highestProb = 0;
+            let detectedClass = '';
+            
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability > highestProb) {
+                    highestProb = prediction[i].probability;
+                    detectedClass = prediction[i].className.toLowerCase();
+                }
+            }
+
+            if (detectedClass === 'paper' && highestProb > 0.8) {
+                const userMessageInput = document.getElementById('user-message');
+                userMessageInput.value = 'paper';
+                document.getElementById('send-message').click();
+            }
+
+            webcam.stop();
+            isScanning = false;
+            document.getElementById('startButton').textContent = 'Start Scanner';
+            document.getElementById('captureButton').disabled = true;
+            labelContainer.innerHTML = `Detected: ${detectedClass} (${(highestProb * 100).toFixed(1)}%)`;
+        }
+    </script>
+
+    
   <script src="homescript.js"></script>
 </body>
 </html>
