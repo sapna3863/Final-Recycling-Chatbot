@@ -116,7 +116,6 @@
                     detectedClass = prediction[i].className.toLowerCase();
                 }
             }
-
             if (detectedClass === 'paper' && highestProb > 0.8) {
                 const userMessageInput = document.getElementById('user-message');
                 userMessageInput.value = 'paper';
