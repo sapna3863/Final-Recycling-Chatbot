@@ -301,3 +301,32 @@ materialSelect.addEventListener("change", () => {
         materialSelect.value = ""; // Reset dropdown
     }
 });
+function startCamera() {
+  const video = document.getElementById('webcam');
+  const placeholder = document.getElementById('webcam-placeholder');
+
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+      video.srcObject = stream;
+      video.style.display = 'block';
+      placeholder.style.display = 'none';
+    })
+    .catch(error => {
+      console.error('Error accessing camera:', error);
+      placeholder.textContent = 'Camera not accessible';
+    });
+}
+
+function stopCamera() {
+  const video = document.getElementById('webcam');
+  const placeholder = document.getElementById('webcam-placeholder');
+
+  if (video.srcObject) {
+    video.srcObject.getTracks().forEach(track => track.stop());
+    video.srcObject = null;
+  }
+
+  video.style.display = 'none';
+  placeholder.style.display = 'flex';
+}
+
