@@ -289,3 +289,15 @@ sendMessageButton.addEventListener("click", () => {
 sendMessage("Welcome to the Recycling EngineerBot, an AI-powered chatbot designed to help kids learn engineering through projects using recyclable materials. 🌎🌳🥬", 0);
 sendMessage("Let's get started! What material would you like to learn about? Enter a material related to sustainability to start a project(e.g. magazines, cardboard, electronics, food waste, paper, water filter, bottles):", 3500);
 appendMessage("Chatbot","Type 'exit' to leave the chatbot.", 8000);
+const materialSelect = document.getElementById("material-select");
+if (!materialSelect) {
+    console.error("Dropdown element missing from DOM.");
+}
+materialSelect.addEventListener("change", () => {
+    const selectedMaterial = materialSelect.value;
+    if (selectedMaterial) {
+        appendMessage("user", selectedMaterial, 0);
+        generateResponse(selectedMaterial);
+        materialSelect.value = ""; // Reset dropdown
+    }
+});

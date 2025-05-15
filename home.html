@@ -17,6 +17,17 @@
           </div>
       <div class="user-input">
           <input type="text" id="user-message" placeholder="Enter a material or 'exit'">
+          <select id="material-select">
+            <option value="">--Select a material--</option>
+            <option value="magazines">Magazines</option>
+            <option value="cardboard">Cardboard</option>
+            <option value="electronics">Electronics</option>
+            <option value="food waste">Food Waste</option>
+            <option value="paper">Paper</option>
+            <option value="water filter">Water Filter</option>
+            <option value="bottles">Bottles</option>
+          </select>
+
           <button id="send-message">Send Idea</button>
       </div>
   </div>
@@ -31,7 +42,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
-        const URL = "https://teachablemachine.withgoogle.com/models/peFvHC4z5/";
+        const URL = "https://teachablemachine.withgoogle.com/models/hI7uswJkQ/";
         let model, webcam, labelContainer, maxPredictions;
         let isScanning = false;
 
@@ -110,7 +121,21 @@
                 userMessageInput.value = 'paper';
                 document.getElementById('send-message').click();
             }
-
+            if (detectedClass === 'cardboard' && highestProb > 0.8) {
+                const userMessageInput = document.getElementById('user-message');
+                userMessageInput.value = 'cardboard';
+                document.getElementById('send-message').click();
+            }
+            if (detectedClass === 'magazines' && highestProb > 0.8) {
+                const userMessageInput = document.getElementById('user-message');
+                userMessageInput.value = 'magazines';
+                document.getElementById('send-message').click();
+            }
+            if (detectedClass === 'bottles' && highestProb > 0.8) {
+                const userMessageInput = document.getElementById('user-message');
+                userMessageInput.value = 'bottles';
+                document.getElementById('send-message').click();
+            }
             webcam.stop();
             isScanning = false;
             document.getElementById('startButton').textContent = 'Start Scanner';

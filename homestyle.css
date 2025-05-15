@@ -30,7 +30,23 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #FEF9FF; /* Very light purple */
 }
+.material-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+#material-select {
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FEF9FF; /* Very light purple */
+}
 h1 {
   text-align: center;
   margin-bottom: 20px;
