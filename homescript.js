@@ -111,7 +111,7 @@ const instructionsTemplate = {
             "Add layers of fine sand, then small rocks, then larger gravel.",
             "Pour dirty water (like muddy water from outside) through the filter.",
             "Observe how the layers clean the water. ALWAYS have an adult verify the water's cleanliness before any contact!",
-            "Here's scratch projects  to learn more: https://scratch.mit.edu/projects/1108432596 and            https://scratch.mit.edu/projects/1108821011 and https://scratch.mit.edu/projects/1100132517", 
+            "Here's scratch projects  to learn more: https://scratch.mit.edu/projects/1108432596 and https://scratch.mit.edu/projects/1108821011 and https://scratch.mit.edu/projects/1100132517", 
         ],
     },
     "bottle-vertical-garden": {
@@ -123,7 +123,7 @@ const instructionsTemplate = {
             "Fill each section with potting soil.",
             "Plant herbs, small flowers, or succulents in each bottle section.",
             "Hang the bottles vertically using strong string or wire, creating a hanging garden.",
-            "Here's a scratch project to learn more: https://scratch.mit.edu/projects/1108350699",
+            "Here's a scratch project to learn more: https://scratch.mit.edu/projects/1178025690/",
         ],
     }
 };
