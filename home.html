@@ -126,11 +126,6 @@
                 userMessageInput.value = 'cardboard';
                 document.getElementById('send-message').click();
             }
-            if (detectedClass === 'magazines' && highestProb > 0.8) {
-                const userMessageInput = document.getElementById('user-message');
-                userMessageInput.value = 'magazines';
-                document.getElementById('send-message').click();
-            }
             if (detectedClass === 'bottles' && highestProb > 0.8) {
                 const userMessageInput = document.getElementById('user-message');
                 userMessageInput.value = 'bottles';

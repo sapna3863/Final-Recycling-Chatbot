@@ -37,6 +37,44 @@
   }
 
   /* CSS */
+  .button-27 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    margin-top: 35px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 600;
+    line-height: normal;
+    min-height: clamp(50px, 6vh, 65px);
+    min-width: clamp(160px, 20vw, 250px);
+    max-width: 90vw;
+    outline: none;
+    padding: clamp(14px, 2.5vh, 18px) clamp(20px, 4vw, 32px);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    width: auto;
+  }
+
+  .button-27:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
+  .button-27:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
   .button-81 {
     background-color: #fff;
     border: 0 solid #e2e8f0;
@@ -81,14 +119,12 @@
     <header class="sticky header">
       <!-- Navigation Bar -->
       <div class="container red topBotomBordersOut">
-        <a href="login.html"><b>Login</b></a>
-        <link href = "login.html"><button class="button-81">Sign Up</button></link>
       </div>
     </header>
     <div class="homepageText">
       <h1>Recycling Chatbot</h1>
       <h2>Inspiring Engineers Through Smart Reuse</h2>
-      <button class="button-27">Learn More</button>
+      <a href="about.html" class="button-27">Learn More</a>
     </div>
   </div>
 
