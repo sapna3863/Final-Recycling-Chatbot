@@ -11,6 +11,15 @@
 </head>
     
 <body>
+    <div class="home-container">
+        <header class="home-header">
+          <h1>Try The Recycling Chatbot ♻️</h1>
+          <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+          </nav>
+        </header>
+    </div>
   <div class="chat-container">
       <h1>Recycling Chatbot ♻️</h1>
           <div class="chatbox" id="chat-history">
@@ -32,13 +41,13 @@
       </div>
   </div>
     <div class="material-scanner-container">
-    <div class="image-model-container">
-        <h3>Material Scanner</h3>
-        <button type="button" id="startButton" onclick="init()">Start Scanner</button>
-        <button type="button" id="captureButton" onclick="captureImage()" disabled>Capture Image</button>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
-    </div>
+        <div class="image-model-container">
+            <h3>Material Scanner</h3>
+            <button type="button" id="startButton" onclick="init()">Start Scanner</button>
+            <button type="button" id="captureButton" onclick="captureImage()" disabled>Capture Image</button>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
@@ -138,6 +147,10 @@
             labelContainer.innerHTML = `Detected: ${detectedClass} (${(highestProb * 100).toFixed(1)}%)`;
         }
     </script>
+    
+    <footer id="home-footer">
+      <p>&copy; 2024 Recycling Chatbot - STEM For Change Club </p>
+    </footer>
   <script src="homescript.js"></script>
 </body>
 </html>
