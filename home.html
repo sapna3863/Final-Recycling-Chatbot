@@ -11,6 +11,15 @@
 </head>
     
 <body>
+    <div class="home-container">
+        <header class="home-header">
+          <h1>Try The Recycling Chatbot ♻️</h1>
+          <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">Learn More</a>
+          </nav>
+        </header>
+    </div>
   <div class="chat-container">
       <h1>Recycling Chatbot ♻️</h1>
           <div class="chatbox" id="chat-history">
@@ -32,18 +41,18 @@
       </div>
   </div>
     <div class="material-scanner-container">
-    <div class="image-model-container">
-        <h3>Material Scanner</h3>
-        <button type="button" id="startButton" onclick="init()">Start Scanner</button>
-        <button type="button" id="captureButton" onclick="captureImage()" disabled>Capture Image</button>
-        <div id="webcam-container"></div>
-        <div id="label-container"></div>
-    </div>
+        <div class="image-model-container">
+            <h3>Material Scanner</h3>
+            <button type="button" id="startButton" onclick="init()">Start Scanner</button>
+            <button type="button" id="captureButton" onclick="captureImage()" disabled>Capture Image</button>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
-        const URL = "https://teachablemachine.withgoogle.com/models/hI7uswJkQ/";
+        const URL = "https://teachablemachine.withgoogle.com/models/lsrPHE8rK/";
         let model, webcam, labelContainer, maxPredictions;
         let isScanning = false;
 
@@ -126,11 +135,6 @@
                 userMessageInput.value = 'cardboard';
                 document.getElementById('send-message').click();
             }
-            if (detectedClass === 'magazines' && highestProb > 0.8) {
-                const userMessageInput = document.getElementById('user-message');
-                userMessageInput.value = 'magazines';
-                document.getElementById('send-message').click();
-            }
             if (detectedClass === 'bottles' && highestProb > 0.8) {
                 const userMessageInput = document.getElementById('user-message');
                 userMessageInput.value = 'bottles';
@@ -143,6 +147,10 @@
             labelContainer.innerHTML = `Detected: ${detectedClass} (${(highestProb * 100).toFixed(1)}%)`;
         }
     </script>
+    
+    <footer id="home-footer">
+      <p>&copy; 2024 Recycling Chatbot - STEM For Change Club </p>
+    </footer>
   <script src="homescript.js"></script>
 </body>
 </html>

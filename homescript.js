@@ -329,4 +329,3 @@ function stopCamera() {
   video.style.display = 'none';
   placeholder.style.display = 'flex';
 }
-
